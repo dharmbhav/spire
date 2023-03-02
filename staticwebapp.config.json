@@ -4,13 +4,15 @@
     {
       "route": "/keys",
       "headers": {
+        "x-content-type-options": "application/json; charset=utf-8",
         "content-type": "application/json; charset=utf-8",
         "cache-control": "must-revalidate, max-age=15770000"
       }
     },    
     {
       "route": "/.well-known/*",
-      "headers": {
+      "headers": {        
+        "x-content-type-options": "application/json; charset=utf-8",
         "content-type": "application/json; charset=utf-8",
         "cache-control": "must-revalidate, max-age=15770000"
       }
@@ -36,10 +38,9 @@
     }
   },
   "globalHeaders": {
-    "content-type": "application/json; charset=utf-8",
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
   },
   "mimeTypes": {
-    "": "text/json"
+    ".json": "text/json"
   }
 }
