@@ -4,17 +4,15 @@
     {
       "route": "/keys",
       "headers": {
-        "x-content-type-options": "application/json; charset=utf-8",
-        "content-type": "application/json; charset=utf-8",
-        "cache-control": "must-revalidate, max-age=15770000"
+        "x-content-type-options": "application/json",
+        "content-type": "application/json"
       }
     },    
     {
       "route": "/.well-known/*",
       "headers": {        
-        "x-content-type-options": "application/json; charset=utf-8",
-        "content-type": "application/json; charset=utf-8",
-        "cache-control": "must-revalidate, max-age=15770000"
+        "x-content-type-options": "application/json",
+        "content-type": "application/json"
       }
     }
   ],
