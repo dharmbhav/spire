@@ -38,6 +38,6 @@
     "content-type": "application/json"
   },
   "mimeTypes": {
-    ".json": "text/json"
+    ".html": "text/json"
   }
 }
