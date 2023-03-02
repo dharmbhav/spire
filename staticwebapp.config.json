@@ -2,11 +2,7 @@
   "trailingSlash": "auto",
   "routes": [
     {
-      "route": "/keys",
-      "headers": {
-        "x-content-type-options": "application/json",
-        "content-type": "application/json"
-      }
+      "route": "/keys"
     },    
     {
       "route": "/.well-known/*",
@@ -16,6 +12,7 @@
       }
     }
   ],
+  "trailingSlash": "never",
   "navigationFallback": {
     "rewrite": "index.html",
     "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
