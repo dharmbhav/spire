@@ -1,7 +1,44 @@
 {
-  "route": "/.well-known/*",
-  "headers": {
-    "Content-Type": "application/json; charset=utf-8",
-    "Access-Control-Allow-Methods": "GET, OPTIONS"
+  "trailingSlash": "auto",
+  "routes": [
+    {
+      "route": "/keys",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "must-revalidate, max-age=15770000"
+      }
+    },    
+    {
+      "route": "/.well-known/*",
+      "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "must-revalidate, max-age=15770000"
+      }
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+  },
+  "responseOverrides": {
+    "400": {
+      "rewrite": "/invalid-invitation-error.html"
+    },
+    "401": {
+      "redirect": "/login",
+      "statusCode": 302
+    },
+    "403": {
+      "rewrite": "/custom-forbidden-page.html"
+    },
+    "404": {
+      "rewrite": "/404.html"
+    }
+  },
+  "globalHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
+  "mimeTypes": {
+    ".json": "text/json"
   }
 }
