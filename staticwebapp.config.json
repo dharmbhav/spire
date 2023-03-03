@@ -1,19 +1,12 @@
 {
-  "trailingSlash": "auto",
+  "trailingSlash": "never",
   "routes": [
     {
       "route": "/keys",
       "headers": {
         "content-type": "application/json"
       }
-    },    
-    {
-      "route": "/.well-known/openid-configuration/index.html",
-      "rewrite": "/.well-known/openid-configuration",
-      "headers": {
-        "content-type": "application/json"
-      }
-    },    
+    },   
     {
       "route": "/.well-known/*",
       "headers": {
