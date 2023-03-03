@@ -3,16 +3,11 @@
   "routes": [
     {
       "route": "/keys",
-      "headers": {
-        "content-type": "application/json"
-      }
+      "rewrite": "/keys.json"      
     },   
     {
-      "route": "/.well-known/*",
-      "headers": {
-        "content-type": "application/json",
-        "x-api": "blah"
-      }
+      "route": "/.well-known/openid-configuration",
+      "rewrite": "/.well-known/openid-configuration.json"
     }
   ],
   "navigationFallback": {
