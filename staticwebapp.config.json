@@ -10,7 +10,8 @@
     {
       "route": "/.well-known/*",
       "headers": {
-        "content-type": "application/json"
+        "content-type": "application/json",
+        "x-api": "blah"
       }
     }
   ],
